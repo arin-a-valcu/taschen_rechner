@@ -1,17 +1,15 @@
 input.onPinTouchEvent(TouchPin.P3, ButtonEvent.Click, function () {
-    music.playMelody("B C5 B C5 C D C D ", 120)
-    loesung = b + a
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    loesung = b * a
     for (let index = 0; index < 4; index++) {
         basic.showNumber(loesung)
-        music.playMelody("F G A B C5 B C5 C5 ", 119)
     }
 })
 input.onPinTouchEvent(TouchPin.P2, ButtonEvent.Click, function () {
-    music.playMelody("B C5 B C5 C D C D ", 120)
+    music.playTone(262, music.beat(BeatFraction.Whole))
     loesung = b - a
     for (let index = 0; index < 4; index++) {
         basic.showNumber(loesung)
-        music.playMelody("F G A B C5 B C5 C5 ", 119)
     }
 })
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
@@ -23,10 +21,10 @@ input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     basic.showNumber(b)
 })
 input.onPinTouchEvent(TouchPin.P1, ButtonEvent.Click, function () {
-    music.playMelody("C5 C5 C5 C5 C5 C5 C5 C ", 120)
+    music.playTone(262, music.beat(BeatFraction.Whole))
     basic.showNumber(a)
-    a = 0
     b += a
+    a = 0
     if (input.buttonIsPressed(Button.A)) {
         a = a - 1
         for (let index = 0; index < 4; index++) {
