@@ -8,7 +8,7 @@ def on_button_b():
     b = b - 1
 input.on_button_event(Button.B, input.button_event_click(), on_button_b)
 
-b = 1
+b = 0
 b = 0
 
 def on_forever():
